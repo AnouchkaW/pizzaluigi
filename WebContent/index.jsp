@@ -1,12 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@page contentType='text/html' pageEncoding='UTF-8' session='false'%>
+<!doctype html>
+<html lang='nl'>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Pizza Luigi</title>
+<link rel='icon' href='images/favicon.ico'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<link rel='stylesheet' href='styles/default.css'>
 </head>
 <body>
-
+<h1>Pizza Luigi</h1>
+<img src='images/pizza.jpg' alt='pizza' class='fullwidth'>
+<h2>${begroeting}</h2> 
 </body>
 </html>
