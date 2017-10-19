@@ -3,11 +3,11 @@ package be.vdab.entities;
 public class Persoon {
 
 	public Persoon(String voornaam, String familienaam, int aantalKinderen, boolean gehuwd, Adres adres) {
-		this.voornaam = voornaam;
-		this.familienaam = familienaam;
-		this.aantalKinderen = aantalKinderen;
-		this.gehuwd = gehuwd;
-		this.adres = adres;
+		setVoornaam(voornaam);
+		setFamilienaam(familienaam);
+		setAantalKinderen(aantalKinderen);
+		setGehuwd(gehuwd);
+		setAdres(adres);
 	}
 
 	public Persoon() { // default constructor
