@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import be.vdab.entities.Begroeting;
+
 /**
  * Servlet implementation class IndexServlet
  */
@@ -21,10 +23,7 @@ public class IndexServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		int uur = LocalDateTime.now().getHour();
-		request.setAttribute("begroeting",
-				uur >= 6 && uur < 12 ? "Goede morgen" : uur >= 12 && uur < 18 ? "Goede middag" : "Goede avond");
-		RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
-		dispatcher.forward(request, response);
+		request.setAttribute("begroeting", new Begroeting());
+		request.getRequestDispatcher(VIEW).forward(request, response);
 	}
 }
