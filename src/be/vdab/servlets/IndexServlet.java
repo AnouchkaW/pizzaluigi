@@ -25,7 +25,7 @@ public class IndexServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setAttribute("begroeting", new Begroeting());
-		request.getRequestDispatcher(VIEW).forward(request, response);
 		request.setAttribute("zaakvoerder", new Persoon("Luigi", "Peperone", 7, true));
+		request.getRequestDispatcher(VIEW).forward(request, response);
 	}
 }
