@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import be.vdab.entities.Begroeting;
+import be.vdab.entities.Persoon;
 
 /**
  * Servlet implementation class IndexServlet
@@ -25,5 +26,6 @@ public class IndexServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.setAttribute("begroeting", new Begroeting());
 		request.getRequestDispatcher(VIEW).forward(request, response);
+		request.setAttribute("zaakvoerder", new Persoon("Luigi", "Peperone", 7, true));
 	}
 }
