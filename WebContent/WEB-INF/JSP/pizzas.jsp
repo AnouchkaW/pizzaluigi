@@ -9,10 +9,18 @@
 <link rel='stylesheet' href='styles/default.css'>
 </head>
 <body>
-	<h1>Pizza's</h1>
+	<h1>
+		Pizza's
+		<c:forEach begin='1' end='5'>
+&#9733; <%-- de HTML code van een ster --%>
+		</c:forEach>
+	</h1>
 	<ul class='zebra'>
 		<c:forEach var='entry' items='${pizzas}'>
-			<li>${entry.key}:${entry.value.naam} ${entry.value.prijs}&euro;</li>
+			<li>
+				${entry.key}: <c:out value='${entry.value.naam}' /> ${entry.value.prijs}&euro; <c:url value='/pizzas/detail.htm' var='detailURL'><c:param name='id' value='${entry.key}' />
+				</c:url> <a href='${detailURL}'>Detail</a>
+			</li>
 		</c:forEach>
 	</ul>
 </body>
