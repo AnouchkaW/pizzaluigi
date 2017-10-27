@@ -21,6 +21,8 @@
 				Pikant
 			</label>
 		</div>
+		<label>Foto<span>${fouten.foto}</span>
+		<input type='file' name='foto'></label>
 		<input type='submit' value='Toevoegen' id='toevoegknop'>
 	</form>
 </body>
