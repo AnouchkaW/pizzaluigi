@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class statistiekServlet
  */
-@WebServlet("/statistiekServlet")
+@WebServlet("/statistiek.htm")
 public class statistiekServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String VIEW = "/WEB-INF/JSP/statistiek.jsp";
