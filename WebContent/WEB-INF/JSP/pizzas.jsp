@@ -9,6 +9,7 @@
 <link rel='stylesheet' href='styles/default.css'>
 </head>
 <body>
+	<c:import url='/WEB-INF/JSP/menu.jsp' />
 	<h1>
 		Pizza's
 		<c:forEach begin='1' end='5'>
@@ -17,8 +18,10 @@
 	</h1>
 	<ul class='zebra'>
 		<c:forEach var='entry' items='${pizzas}'>
-			<li>
-				${entry.key}: <c:out value='${entry.value.naam}' /> ${entry.value.prijs}&euro; <c:url value='/pizzas/detail.htm' var='detailURL'><c:param name='id' value='${entry.key}' />
+			<li>${entry.key}: <c:out value='${entry.value.naam}' />
+				${entry.value.prijs}&euro; <c:url value='/pizzas/detail.htm'
+					var='detailURL'>
+					<c:param name='id' value='${entry.key}' />
 				</c:url> <a href='${detailURL}'>Detail</a>
 			</li>
 		</c:forEach>

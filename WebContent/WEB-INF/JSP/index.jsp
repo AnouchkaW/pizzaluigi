@@ -1,4 +1,5 @@
 <%@page contentType='text/html' pageEncoding='UTF-8' session='false'%>
+<%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
 <!doctype html>
 <html lang='nl'>
 <head>
@@ -8,6 +9,7 @@
 <link rel='stylesheet' href='styles/default.css'>
 </head>
 <body>
+	<c:import url='/WEB-INF/JSP/menu.jsp' />
 	<h1>Pizza Luigi</h1>
 	<img src='images/pizza.jpg' alt='pizza' class='fullwidth'>
 	<h2>${begroeting}</h2>
